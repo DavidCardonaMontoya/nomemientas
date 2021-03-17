@@ -1,10 +1,7 @@
 package domain.juego;
 
 import co.com.sofka.domain.generic.Entity;
-import domain.juego.values.Dinero;
-import domain.juego.values.Estado;
-import domain.juego.values.JugadorID;
-import domain.juego.values.Nombre;
+import domain.juego.values.*;
 
 public class Jugador extends Entity<JugadorID> {
 
@@ -24,6 +21,10 @@ public class Jugador extends Entity<JugadorID> {
 
     public void decrementarCapital(Dinero monto){
         this.capital = this.capital.incrementar(monto);
+    }
+
+    public void proponer(Apuesta apuesta, Adivinanza adivinanza) {
+
     }
 
     public Nombre getNombre() {
